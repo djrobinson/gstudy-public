@@ -1,0 +1,45 @@
+<div class="container-fluid main">
+  <div class="row">
+    <div class="two-thirds column">
+      <div class="row text-center">
+        <h1><a ng-link="['Create']">+ Create a New Deck!</a></h1>
+        <br>
+          <div class="mainButton" ng-class="{'active': $ctrl.mine}" ng-click="$ctrl.userDecks()">My Decks</div>
+          <div class="mainButton"  ng-class="{'active': $ctrl.all}" ng-click="$ctrl.allDecks()">All Decks</div>
+        <hr>
+      </div>
+      <div class="all-decks">
+        <div class="one-third column box text-center deck-container" ng-repeat="(key, deck) in $ctrl.decks track by key">
+          <div ng-if="deck.img_url">
+            <img ng-src="{{deck.img_url}}" class="deck-img">
+          </div>
+          <div class="card-content">
+            <h5><a ng-link="['Show', {id: {{deck.id}}}]"> {{deck.title}}</a></h5>
+            <p>Last updated {{deck.updated | date}}</p>
+            <p>{{deck.description}}</p>
+            <div ng-if="deck.copy">
+              <button ng-click="$ctrl.copyDeck(deck)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="one-third column">
+      <table class="table table-hover notifications">
+      <thead>
+        <tr >
+          <th class="text-center"><h2>Notifications</h2></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="notif in $ctrl.notifications"
+            ng-class="{ 'warning': !notif.read }"
+            ng-click="$ctrl.markAsRead(notif)">
+          <td class="text-center">{{ notif.content }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

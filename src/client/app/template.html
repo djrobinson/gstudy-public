@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row navrow">
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item title"><a ng-link="['Main']">GStudy</a></li>
+
+          <li class="navbar-item option" ng-hide="$root.loggedIn"><a ng-link="['Login']">Login</a></li>
+          <li class="navbar-item option" ng-hide="$root.loggedIn"><a ng-link="['Register']">Register</a></li>
+          <li class="navbar-item option" ng-show="$root.loggedIn" ng-click="$ctrl.logout()"><a class="navbar-link">Logout</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="row">
+    <ng-outlet></ng-outlet>
+  </div>
+</div>

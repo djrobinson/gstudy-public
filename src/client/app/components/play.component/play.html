@@ -1,0 +1,43 @@
+
+  <div class="row">
+    <div class="six columns question-container">
+      <div class="twelve columns text-center question">
+          <div class="twelve columns ques">
+            <h4>{{$ctrl.question.question}}</h4>
+          </div>
+
+          <div class="twelve columns quest">
+            <img ng-src="{{$ctrl.question.question_url}}" class="quiz-pic" />
+          </div>
+      </div>
+      <div class="twelve columns text-center">
+        <div ng-hide="$ctrl.done">
+          <button ng-click="$ctrl.nextQuestion($ctrl.score[0], true)">Right</button>
+          <button ng-click="$ctrl.nextQuestion($ctrl.score[0], false)">Wrong</button>
+        </div>
+        <div ng-show="$ctrl.done">
+          <button ng-click="$ctrl.home()">End Quiz</button>
+        </div>
+      </div>
+      <div class="twelve columns text-center answer" ng-click="$ctrl.showAnswer()">
+        <div ng-show="$ctrl.show">
+          <h4>{{$ctrl.question.answer}}</h4>
+        </div>
+        <div ng-hide="$ctrl.show">
+          <h4>What is an Answer?</h4>
+        </div>
+      </div>
+  </div>
+  <div class="six columns">
+    <h3>{{$ctrl.deckTitle}}</h3>
+    <current-score score="$ctrl.score"></current-score>
+
+
+    <hr>
+    <div class="twelve columns">
+      <h4>Previously Answered</h4>
+    </div>
+    <previous-answers answers="$ctrl.previousQuestions"></previous-answers>
+
+  </div>
+</div>

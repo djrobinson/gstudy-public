@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="gStudyApp">
+  <head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <meta charset="utf-8">
+    <title>gStudy Flashcards</title>
+    <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.7/angular-css.min.js" charset="utf-8"></script>
+    <script src="https://npmcdn.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-messages.min.js"></script>
+  </head>
+  <body>
+
+    <home></home>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app/vendor/btford-socket.min.js"></script>
+    <script src="app/app.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
+    <script src="app/components/login.component/login.component.js"></script>
+    <script src="app/components/register.component/register.component.js"></script>
+    <script src="app/components/main.component/main.component.js"></script>
+    <script src="app/components/create.component/create.component.js"></script>
+    <script src="app/components/show.component/show.component.js"></script>
+    <script src="app/components/play.component/play.component.js"></script>
+    <script src="app/components/play.component/current-score.component.js"></script>
+    <script src="app/components/play.component/previous-answer.component.js"></script>
+    <script src="app/services/auth.factory.js"></script>
+    <script src="app/services/decks.service.js"></script>
+    <script src="app/services/scores.service.js"></script>
+    <script src="app/services/notification.service.js"></script>
+
+
+  </body>
+</html>

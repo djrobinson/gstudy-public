@@ -1,0 +1,213 @@
+.main {
+  margin: 2rem;
+}
+
+html {
+  height:100%;
+  width:100%;
+}
+
+body {
+  height:100%;
+  width:100%;
+}
+
+.navrow  {
+  border-bottom: solid 1px black;
+}
+
+.reset {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-spacer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pull-right {
+  float: right;
+}
+
+.question-container {
+    position: relative;
+    height:40rem;
+    width:100%;
+}
+
+.question {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height:30rem;
+    margin: 4rem;
+    border: solid 1px #B0B0B0;
+}
+
+.answer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height:30rem;
+    margin: 4rem;
+    border: solid 1px #B0B0B0;
+}
+
+@media (min-width: 600px ){
+
+  nav ul {
+    float: left;
+    width: 100%;
+  }
+  nav ul li {
+    display: inline;
+    padding-left: 4rem;
+    margin-right: 2rem;
+  }
+
+  .option {
+    float: right;
+  }
+
+  .title {
+    float: left;
+  }
+  .all-decks {
+    margin-left: 7rem;
+  }
+  .notifications {
+    width: 95%;
+    float: right;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    text-align: center;
+    width: 100%;
+    border: solid 1px #B0B0B0;
+  }
+  .notifications {
+    width: 100%;
+  }
+
+}
+
+.samples {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 3rem;
+}
+
+nav ul li a:hover {
+  color: #1F01B9;
+}
+
+.login {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.box {
+  position: relative;
+  border: solid 1px #B0B0B0;
+  padding: 1rem;
+  margin: 0;
+  height: 100%;
+}
+
+.prev {
+  height: 20rem;
+}
+
+.mainButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00008B;
+  width: 40%;
+  color: white;
+  font-size: 4rem;
+  height: 10rem;
+}
+
+.active {
+  background-color: gray;
+}
+
+tr {
+  height: 8rem;
+}
+
+.show-content {
+  margin-top: 4rem;
+}
+
+.quiz-pic {
+  height: 20rem;
+}
+
+.ques {
+  display: block;
+}
+
+.title-img {
+  width: 100%;
+}
+
+.deck-img {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.card-content {
+  width: 100%;
+  background-color: rgba(200,200,200, 0.8)  ;
+  position: absolute;
+  z-index: 2;
+  bottom: 2rem;
+}
+
+.deck-container {
+  padding: 0;
+  margin: 0;
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.create {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.warning {
+  background-color: #7FFFD4;
+}

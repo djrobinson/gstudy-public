@@ -1,0 +1,55 @@
+<div class="row create">
+  <form>
+  <div class="twelve column text-center">
+    <h1>Create a New Deck</h1>
+  </div>
+  <div class="twelve column">
+    <h4>Deck Info</h4>
+  </div>
+  <div class="twelve column box">
+    <div class="six columns">
+      <label>Deck Name</label>
+      <input class="u-full-width" type="text" ng-model="$ctrl.deck.title" required>
+      <label>Deck Image Url</label>
+      <input class="u-full-width" type="text" ng-model="$ctrl.deck.img_url">
+    </div>
+    <div class="six columns">
+      <label>Deck Description</label>
+      <textarea class="u-full-width" ng-model="$ctrl.deck.description" required></textarea>
+    </div>
+  </div>
+  <div class="twelve column">
+    <h4>Cards</h4>
+  </div>
+  <div class="twelve column box" style="margin-top: 2rem;" ng-repeat="(key, question) in $ctrl.questions track by key">
+    <div class="row">
+      <div class="six columns">
+        <label>Question</label>
+        <input class="u-full-width" type="text" ng-model="$ctrl.questions[key].question" required>
+      </div>
+      <div class="six columns">
+        <label>Answer</label>
+        <input class="u-full-width" type="text" ng-model="$ctrl.questions[key].answer" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <label>Question Image Url</label>
+        <input class="u-full-width" type="text" ng-model="$ctrl.questions[key].question_url">
+      </div>
+      <div class="six columns">
+        <label>Answer Image Url</label>
+        <input class="u-full-width" type="text" ng-model="$ctrl.questions[key].answer_url">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="twelve columns  " style="padding-top: 2rem;">
+    <button ng-click="$ctrl.addQuestion()">+ Add a New Question</button>
+  </div>
+  <div class="twelve columns">
+    <br>
+    <button class="pull-right" ng-click="$ctrl.createDeck()">Create Deck</button>
+  </div>
+  </form>
+</div>

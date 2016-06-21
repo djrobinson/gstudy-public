@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="eight column offset-by-two show-content">
+    <div class="one-third column">
+      <img ng-src="{{$ctrl.deck.img_url}}" class="title-img">
+    </div>
+    <div class="two-thirds column">
+      <h2>{{$ctrl.deck.title}}</h2>
+      <h5>Last updated {{$ctrl.deck.updated | date}}</h5>
+      <p>{{$ctrl.deck.description}}</p>
+      <a class="button" ng-link="['Play', {id: $ctrl.deck.id}]">Start Studying</a>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row samples" >
+  <h2 class="text-center">Sample Questions: </h2>
+  <ul>
+    <li ng-repeat="question in $ctrl.deckQuestions">
+      <h5>{{question.question}}</h5>
+    </li>
+  </ul>
+</div>

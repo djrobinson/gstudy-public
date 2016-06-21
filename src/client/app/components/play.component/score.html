@@ -1,0 +1,11 @@
+<div class="twelve columns">
+  <div class="one-third column">
+    <p>Percentage {{$ctrl.score[0].num_right / ($ctrl.score[0].num_wrong + $ctrl.score[0].num_right) * 100 || '0' | number:0 }}%</p>
+  </div>
+  <div class="one-third column">
+    <p>Correct {{$ctrl.score[0].num_right}}</p>
+  </div>
+  <div class="one-third column">
+    <p>Incorrect {{$ctrl.score[0].num_wrong}}</p>
+  </div>
+</div>
